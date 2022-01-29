@@ -12,9 +12,9 @@ class MyPipelineStack(cdk.Stack):
                         synth=ShellStep("Synth", 
                             input=CodePipelineSource.git_hub(
                             "E26Lab/cicd-project", 
-                            "main", 
+                            "main"), 
                             commands=["npm install -g aws-cdk", 
                                 "python -m pip install -r requirements.txt", 
                                 "cdk synth"]
                         ))
-                    )
+                    

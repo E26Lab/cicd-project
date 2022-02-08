@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from distutils import core
 import os
 from aws_cdk import core
 from cicd_project.cicd_project_stack import MyPipelineStack

@@ -10,7 +10,6 @@ jobs:
 
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      
       - name: Configure AWS credentials 
           uses: aws-actions/configure-aws-credentials@v1
           with:

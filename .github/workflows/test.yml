@@ -1,17 +1,24 @@
 name: GitHub Actions Test
 on: [push]
+permissions:
+      id-token: write
+      contents: read 
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    
-    permissions:
-      id-token: write
-      contents: read
-
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - name: Configure AWS credentials 
-          uses: aws-actions/configure-aws-credentials@v1
+      - uses: aws-actions/configure-aws-credentials@v1
           with:
             role-to-assume: arn:aws:iam::465444432665:role/github-actions-role
             aws-region: us-east-1
+
+    
+   
+   
+   
+   
+   
+   
+   
+     
